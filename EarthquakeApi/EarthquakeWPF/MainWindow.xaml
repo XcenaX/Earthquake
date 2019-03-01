@@ -1,0 +1,77 @@
+﻿<Window x:Class="EarthquakeWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EarthquakeWPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="529.448" Width="850.893" WindowStyle="None" SnapsToDevicePixels="True">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <StackPanel  Name="RegistrateForm" Margin="0,0,0,-47" Visibility="Visible" >
+            <StackPanel Height="60" Background="#FF2D363E">
+                <TextBlock Width="292" HorizontalAlignment="Left" Height="60" Foreground="#EBB129" Text="Earthquakes.kz" FontSize="36" TextAlignment="Center" />
+            </StackPanel>
+            <ItemsControl  BorderBrush="Black" BorderThickness="1" Background="#3C464F" Height="505" >
+                <Button x:Name="CloseButtonRegistrate" Margin="580,5,0,0" Height="30" Width="50" HorizontalAlignment="Right" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="CloseRegistratePanel">
+                    <materialDesign:PackIcon Kind="Close" Width="20" Height="22" RenderTransformOrigin="0.12,0.56" Foreground="#FFEBB129"/>
+                </Button>
+                <TextBlock Margin="62,0,267,0" Height="59" Text="Регистрация" FontSize="40" TextAlignment="Left" FontWeight="Thin" Foreground="#EBB129" />
+                <StackPanel Width="550" Height="40" Margin="40,20,0,0" OpacityMask="Black" Orientation="Horizontal">
+                    <TextBlock  Text="ФИО" Style="{StaticResource RegisterTextBlock}" TextWrapping="Wrap"/>
+                    <TextBox  Margin="90,0,0,0"  x:Name="ClientFullNameRegistrate" Style="{StaticResource RegisterTextBox}"/>
+                </StackPanel>
+                <StackPanel Width="550" Height="40" Margin="40,20,0,0" OpacityMask="Black" Orientation="Horizontal">
+                    <TextBlock  Text="E-mail" Style="{StaticResource RegisterTextBlock}" TextWrapping="Wrap" />
+                    <TextBox Margin="70,0,0,0"  x:Name="ClientLoginRegistrate" Style="{StaticResource RegisterTextBox}"/>
+                </StackPanel>
+                <StackPanel Width="550" Height="40" Margin="40,20,0,0" OpacityMask="Black" Orientation="Horizontal">
+                    <TextBlock  Text="Пароль" Style="{StaticResource RegisterTextBlock}" TextWrapping="Wrap"/>
+                    <PasswordBox  Margin="80,0,0,0"  x:Name="ClientPasswordRegistrate" Style="{StaticResource RegisterPasswordBox}"/>
+                </StackPanel>
+                <StackPanel Width="550" Height="40" Margin="40,20,0,0" OpacityMask="Black" Orientation="Horizontal">
+                    <TextBlock TextWrapping="Wrap" Text="Под. пароль" Style="{StaticResource RegisterTextBlock}" />
+                    <PasswordBox  Margin="80,0,0,0"  x:Name="ClientPasswordConfirm" Style="{StaticResource RegisterPasswordBox}"/>
+                </StackPanel>
+                <Button Width="150" Height="35" Margin="60,50,0,0" Background="#FFEBB129" Content="Регистрация" BorderBrush="{x:Null}" FontSize="22" FontWeight="Thin" Foreground="#FF3C464F" HorizontalAlignment="Left" Click="RegistrateUser"/>
+            </ItemsControl>
+        </StackPanel>
+
+        <StackPanel Name="LoginForm" Visibility="Collapsed">
+            <StackPanel Height="60" Background="#FF2D363E">
+                <TextBlock Width="292" HorizontalAlignment="Left" Height="60" Foreground="#EBB129" Text="Earthquakes.kz" FontSize="36" TextAlignment="Center" />
+            </StackPanel>
+            <ItemsControl  BorderBrush="Black" BorderThickness="1" Background="#3C464F" Height="499" >
+                <Button x:Name="CloseButton" Margin="580,5,0,0" Height="30" Width="50" HorizontalAlignment="Right" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="CloseLoginPanel">
+                    <materialDesign:PackIcon Kind="Close" Width="20" Height="22" RenderTransformOrigin="0.12,0.56" Foreground="#FFEBB129"/>
+                </Button>
+                <TextBlock Margin="-350,90,0,0" Width="160" Height="47" Text="Вход" FontSize="40" TextAlignment="Left" FontWeight="Thin" Foreground="#EBB129" />
+                <StackPanel Width="550" Height="40" Margin="40,20,0,0" OpacityMask="Black" Orientation="Horizontal">
+                    <TextBlock  Text="E-mail" Style="{StaticResource LoginTextBlock}" />
+                    <TextBox  Margin="70,0,0,0"  x:Name="UserLogin" Style="{StaticResource LoginTextBox}" />
+                </StackPanel>
+                <StackPanel  Width="550" Height="40" Margin="40,20,0,0" OpacityMask="Black" Orientation="Horizontal">
+                    <TextBlock  Text="Пароль" Style="{StaticResource LoginTextBlock}" />
+                    <PasswordBox  Margin="70,0,0,0" x:Name="UserPassword" Style="{StaticResource LoginPasswordBox}"/>
+                </StackPanel>
+                <Button Background="#FFEBB129" Margin="254,20" Content="Войти" BorderBrush="{x:Null}" FontSize="22" FontWeight="Thin" Foreground="#FF3C464F"  Width="119" Height="36" Click="LoginUser"/>
+            </ItemsControl>
+        </StackPanel>
+
+        <StackPanel Background="#3C464F" Name="Main" Visibility="Collapsed">
+            <StackPanel Height="60" Background="#FF2D363E" Orientation="Horizontal">
+                <TextBlock Width="292" HorizontalAlignment="Left" Height="60" Foreground="#EBB129" Text="Earthquakes.kz" FontSize="36" TextAlignment="Center" />
+            </StackPanel>
+            <Button  Content="Войти" Margin="310,130,310,0" Click="OpenLoginPanel" Style="{StaticResource MainButtonStyle}"/>
+            <Button  Content="Регистрация"  Margin="310,50,310,0" Click="OpenRegistratePanel" Style="{StaticResource MainButtonStyle}"/>
+        </StackPanel>
+
+        <StackPanel Name="EarthquakePanel" Background="#3C464F" Visibility="Collapsed">
+            <StackPanel Height="60" Background="#FF2D363E" Orientation="Horizontal">
+                <TextBlock Width="292" HorizontalAlignment="Left" Height="60" Foreground="#EBB129" Text="Earthquakes.kz" FontSize="36" TextAlignment="Center" />
+                <TextBlock Width="250" Margin="270,0,0,0" TextAlignment="Center" Height="60" VerticalAlignment="Top" Text="" Padding="0,11,0,0" FontSize="24" Name="LoginIfLogged"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

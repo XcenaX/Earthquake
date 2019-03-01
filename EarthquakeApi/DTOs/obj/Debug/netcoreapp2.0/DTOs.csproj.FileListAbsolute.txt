@@ -1,0 +1,6 @@
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\DTOs\bin\Debug\netcoreapp2.0\DTOs.deps.json
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\DTOs\bin\Debug\netcoreapp2.0\DTOs.dll
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\DTOs\obj\Debug\netcoreapp2.0\DTOs.csprojAssemblyReference.cache
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\DTOs\obj\Debug\netcoreapp2.0\DTOs.csproj.CoreCompileInputs.cache
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\DTOs\obj\Debug\netcoreapp2.0\DTOs.AssemblyInfoInputs.cache
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\DTOs\obj\Debug\netcoreapp2.0\DTOs.AssemblyInfo.cs

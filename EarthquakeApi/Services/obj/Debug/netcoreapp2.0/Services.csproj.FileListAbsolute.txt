@@ -1,0 +1,6 @@
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\Services\bin\Debug\netcoreapp2.0\Services.deps.json
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\Services\bin\Debug\netcoreapp2.0\Services.dll
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\Services\obj\Debug\netcoreapp2.0\Services.csprojAssemblyReference.cache
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\Services\obj\Debug\netcoreapp2.0\Services.csproj.CoreCompileInputs.cache
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\Services\obj\Debug\netcoreapp2.0\Services.AssemblyInfoInputs.cache
+c:\users\лебедевв.corp.000\source\repos\Earthquake Api\Services\obj\Debug\netcoreapp2.0\Services.AssemblyInfo.cs

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  earthquakeapi:
+    image: ${DOCKER_REGISTRY}earthquakeapi
+    build:
+      context: .
+      dockerfile: Earthquake Api/Dockerfile
